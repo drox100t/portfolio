@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="#accueil">Accueil</a>
+            <a href="#productions">Productions</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="header-content">
+            <h1 id="portfolio-title"></h1>
+            <h2>Je suis <span id="dynamic-text"></span></h2>
+        </div>
+    </header>
+
+  <section id="accueil">
+      <h2 class="glitch-text">Bienvenue</h2>
+      <p>Je suis étudiant en MMI à l’IUT de Rouen. Découvrez mes productions et mon parcours !</p>
+      <img src="img1.png" alt="cac">
+      <div class="text-container">
+        <p>Rendez votre</p>
+        <p><span id="changing-text">Présent</span></p>
+        <p>Meilleur</p>
+    </div>
+    
+  </section>
+    <section id="productions" class="productions">
+        <h2>Mes productions</h2>
+
+        <div class="production-item">
+            <a href="https://drox100t.github.io/foodtruck/" target="_blank">
+                <img src="camion1.png" alt="SAE 105">
+            </a>
+            <p>SAE 105 : Un projet interactif illustrant mes compétences en développement web.</p>
+            <a href="https://drox100t.github.io/foodtruck/" target="_blank" class="btn">Voir le projet</a>
+        </div>
+
+        <div class="production-item">
+            <a href="https://drox100t.github.io/chatbot/" target="_blank">
+                <img src="Capture.PNG" alt="Projet 2">
+            </a>
+            <p>Projet 2 : Un projet de ChatBot généré par l'IA</p>
+            <a href="https://drox100t.github.io/chatbot/" target="_blank" class="btn">Voir le projet</a>
+        </div>
+
+        <div class="production-item">
+            <a href="https://drox100t.github.io/quizz/" target="_blank">
+                <img src="Capture2.PNG" alt="Projet 3">
+            </a>
+            <p>Projet 3 : Un quizz en ligne</p>
+            <a href="https://drox100t.github.io/quizz/" target="_blank" class="btn">Voir le projet</a>
+        </div>
+        <div class="production-item">
+          <a href="https://drox100t.github.io/meteo/" target="_blank">
+              <img src="Capture3.PNG" alt="Projet 3">
+          </a>
+          <p>Projet 4 : Tableau de bord de météo en ligne</p>
+          <a href="https://drox100t.github.io/meteo/" target="_blank" class="btn">Voir le projet</a>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contactez-moi</h2>
+        <form>
+            <input type="text" name="name" placeholder="Votre nom" required>
+            <input type="email" name="email" placeholder="Votre email" required>
+            <textarea name="message" placeholder="Votre message" rows="5" required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2025 Jan Jawish. Tous droits réservés.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+
+    
+</body>
+</html>
