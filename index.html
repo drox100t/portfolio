@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Jan Jawish</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<header class="parallax-header">
+    <nav>
+        <a href="#accueil">Accueil</a>
+        <a href="#productions">Productions</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-content">
+        <h1 id="portfolio-title"></h1>
+        <h2>Je suis <span id="dynamic-text"></span></h2>
+    </div>
+</header>
+
+<!-- 👨‍💻 A PROPOS -->
+<section id="a-propos" class="a-propos">
+  <div class="a-propos-container">
+    <div class="a-propos-text">
+      <h2>À propos de moi</h2>
+      <p class="about-text">
+        Je m'appelle Jan, étudiant en MMI à l'IUT de Rouen. 
+        Passionné par la création web, le <span class="hover-gif" data-gif="https://media.giphy.com/media/3o7TKP9Wv3jT1ba8vw/giphy.gif">design interactif</span>
+
+        et les <span class="hover-gif" data-gif="utilisateur.gif">expériences utilisateurs</span>, 
+        j'aime transformer des idées simples en projets concrets et fonctionnels.
+      </p>
+    </div>
+    <div class="a-propos-img">
+      <img src="unnamed.jpg" alt="Photo de Jan Jawish">
+    </div>
+  </div>
+</section>
+<section id="productions" class="productions">
+    <h2>Mes productions</h2>
+    <div class="custom-cursor" id="custom-cursor">SWIPE</div>
+    <div class="carousel-wrapper">
+        <div id="projectCarousel" class="slider-container">
+
+            <div class="project-slide">
+                <img src="unitools.png" alt="UniTools – Outils étudiants">
+                <h3>UniTools – Outils étudiants</h3>
+                <p>
+                  UniTools centralise des outils pratiques pour les étudiants : météo du campus, coup de pouce entre camarades, accès ENT, chat, planning, notifications et bien plus.  
+                  Un projet complet, utile et évolutif pensé pour la vie universitaire.
+                </p>
+              
+                <div class="project-tags">
+                  <div class="skill-inline"><i class="fab fa-html5"></i><span>HTML</span></div>
+                  <div class="skill-inline"><i class="fab fa-css3-alt"></i><span>CSS</span></div>
+                  <div class="skill-inline"><i class="fab fa-js-square"></i><span>JavaScript</span></div>
+                  <div class="skill-inline"><i class="fab fa-php"></i><span>PHP</span></div>
+                  <div class="skill-inline"><i class="fas fa-database"></i><span>MySQL</span></div>
+                  <div class="skill-inline"><i class="fab fa-git-alt"></i><span>Git</span></div>
+                </div>
+              
+                <a href="https://jawisjan.tpweb.univ-rouen.fr/UniTools/index.php" target="_blank" class="btn">Voir le projet</a>
+              </div>
+              
+
+            <div class="project-slide">
+                <img src="camion1.png" alt="SAE 105 – Foodtruck">
+                <h3>SAE 105 – Foodtruck</h3>
+                <p>Un site interactif animé pour un foodtruck fictif.</p>
+                <div class="project-tags">
+                    <div class="skill-inline"><i class="fab fa-html5"></i><span>HTML</span></div>
+                    <div class="skill-inline"><i class="fab fa-css3-alt"></i><span>CSS</span></div>
+                    <div class="skill-inline"><i class="fab fa-js"></i><span>JavaScript</span></div>
+                  </div>
+                <a href="https://drox100t.github.io/foodtruck/" target="_blank" class="btn">Voir le projet</a>
+            </div>
+
+            <div class="project-slide">
+                <img src="Capture.PNG" alt="ChatBot IA">
+                <h3>ChatBot IA</h3>
+                <p>Un chatbot intelligent généré via OpenAI pour interagir avec l’utilisateur.</p>
+                <div class="project-tags">
+                    <div class="skill-inline"><i class="fab fa-html5"></i><span>HTML</span></div>
+                    <div class="skill-inline"><i class="fab fa-js"></i><span>JavaScript</span></div>
+                    <div class="skill-inline"><i class="fas fa-robot"></i><span>API OpenAI</span></div>
+                  </div>
+                <a href="https://drox100t.github.io/chatbot/" target="_blank" class="btn">Voir le projet</a>
+            </div>
+
+            <div class="project-slide">
+                <img src="Capture2.PNG" alt="Quizz interactif">
+                <h3>Quizz interactif</h3>
+                <p>Un jeu de questions-réponses dynamique avec gestion des catégories et score.</p>
+                <div class="project-tags">
+                    <div class="skill-inline"><i class="fab fa-html5"></i><span>HTML</span></div>
+                    <div class="skill-inline"><i class="fab fa-css3-alt"></i><span>CSS</span></div>
+                    <div class="skill-inline"><i class="fab fa-js"></i><span>JavaScript</span></div>
+                  </div>
+                <a href="https://drox100t.github.io/quizz/" target="_blank" class="btn">Voir le projet</a>
+            </div>
+
+            <div class="project-slide">
+                <img src="Capture3.PNG" alt="Dashboard météo">
+                <h3>Dashboard Météo</h3>
+                <p>Un tableau de bord météo avec géolocalisation et affichage des prévisions sur 5 jours.</p>
+              
+                <div class="project-tags">
+                  <div class="skill-inline"><i class="fab fa-html5"></i><span>HTML</span></div>
+                  <div class="skill-inline"><i class="fab fa-js-square"></i><span>JavaScript</span></div>
+                  <div class="skill-inline"><i class="fas fa-map-marker-alt"></i><span>Géoloc</span></div>
+                  <div class="skill-inline"><i class="fas fa-cloud-sun"></i><span>API météo</span></div>
+                </div>
+              
+                <a href="https://drox100t.github.io/meteo/" target="_blank" class="btn">Voir le projet</a>
+              </div>
+              
+
+            <div class="project-slide">                 
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/g33UHsUyc_Y?si=WlDqZ3XPt9rCJ_Gx" title="SAE 104 – L'autostoppeur" frameborder="0" allowfullscreen></iframe>
+                <h3>SAE 104 – L'autostoppeur</h3>
+                <p>Un projet vidéo où j’ai imaginé, tourné et monté une courte fiction autour de la mise en scène.</p>
+                <div class="project-tags">
+                    <div class="skill-inline"><i class="fas fa-video"></i><span>Vidéo</span></div>
+                    <div class="skill-inline"><i class="fas fa-pen-nib"></i><span>Scénario</span></div>
+                    <div class="skill-inline"><i class="fas fa-cut"></i><span>Montage</span></div>
+                  </div> 
+                <a href="https://www.youtube.com/watch?v=g33UHsUyc_Y" target="_blank" class="btn">Voir le projet</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="competences" class="competences">
+    <h2>Mes Compétences</h2>
+    <div class="skills-container">
+  
+      <!-- TECHNIQUES -->
+      <div class="skill skill-html-explode">
+        <i class="fab fa-html5"></i>
+        <span>HTML</span>
+        <div class="progress-bar">
+          <div class="progress" style="width: 90%;"></div>
+        </div>
+        <div class="particles-container"></div>
+      </div>
+           
+      <div class="skill skill-css8bit">
+        <i class="fab fa-css3-alt"></i>
+        <span>CSS</span>
+        <div class="progress-bar">
+          <div class="progress" style="width: 85%;"></div>
+        </div>
+      </div>
+      
+      
+      
+      <div class="skill skill-js-flash">
+        <i class="fab fa-js-square"></i>
+        <span>JavaScript</span>
+        <div class="progress-bar">
+          <div class="progress" style="width: 75%;"></div>
+        </div>
+        <div class="flash-line"></div>
+      </div>
+      
+      
+      <div class="skill skill-php">
+        <i class="fab fa-php"></i>
+        <span>PHP</span>
+        <div class="progress-bar">
+          <div class="progress" style="width: 70%;"></div>
+        </div>
+      </div>
+      
+      <div class="skill skill-wordpress">
+        <i class="fab fa-wordpress"></i>
+        <span>WordPress</span>
+        <div class="progress-bar">
+          <div class="progress" style="width: 65%;"></div>
+        </div>
+      </div>
+      
+      <div class="skill skill-figma">
+        <i class="fab fa-figma"></i>
+        <span>Figma</span>
+        <div class="progress-bar">
+          <div class="progress" style="width: 60%;"></div>
+        </div>
+      </div>
+      
+      <div class="skill skill-mysql">
+        <i class="fas fa-database"></i>
+        <span>MySQL</span>
+        <div class="progress-bar">
+          <div class="progress" style="width: 65%;"></div>
+        </div>
+      </div>
+      
+      <div class="skill skill-firebase">
+        <i class="fas fa-fire"></i>
+        <span>Firebase</span>
+        <div class="progress-bar">
+          <div class="progress" style="width: 60%;"></div>
+        </div>
+      </div>
+      
+      <div class="skill skill-nodejs">
+        <i class="fab fa-node-js"></i>
+        <span>Node.js</span>
+        <div class="progress-bar">
+          <div class="progress" style="width: 55%;"></div>
+        </div>
+      </div>
+      
+      <div class="skill skill-openai">
+        <i class="fas fa-robot"></i>
+        <span>OpenAI</span>
+        <div class="progress-bar">
+          <div class="progress" style="width: 65%;"></div>
+        </div>
+      </div>
+      
+  
+      <!-- COLLABORATIFS & OUTILS -->
+      <div class="skill skill-git">
+        <i class="fab fa-git-alt"></i>
+        <span>Git / GitHub</span>
+        <div class="progress-bar">
+          <div class="progress" style="width: 70%;"></div>
+        </div>
+      </div>
+      
+      <div class="skill skill-team">
+        <i class="fas fa-users"></i>
+        <span>Travail en équipe</span>
+        <div class="progress-bar">
+          <div class="progress" style="width: 85%;"></div>
+        </div>
+      </div>
+      
+      <div class="skill skill-project">
+        <i class="fas fa-tasks"></i>
+        <span>Gestion de projet</span>
+        <div class="progress-bar">
+          <div class="progress" style="width: 75%;"></div>
+        </div>
+      </div>
+      
+      <div class="skill skill-trello-notion">
+        <i class="fas fa-columns"></i>
+        <span>Trello / Notion</span>
+        <div class="progress-bar">
+          <div class="progress" style="width: 70%;"></div>
+        </div>
+      </div>
+      
+  
+    </div>
+  </section>
+
+<!-- 📬 CONTACT -->
+<section id="contact" class="contact">
+  <h2>Contactez-moi</h2>
+  <form action="https://formspree.io/f/mvgaprld" method="POST">
+      <input type="text" name="name" placeholder="Votre nom" required>
+      <input type="email" name="email" placeholder="Votre email" required>
+      <textarea name="message" placeholder="Votre message" rows="5" required></textarea>
+      <input type="hidden" name="_subject" value="Nouveau message depuis le portfolio">
+      <input type="text" name="_gotcha" style="display: none;">
+      <button type="submit">Envoyer</button>
+  </form>
+</section>
+
+<!-- 💬 CITATION -->
+<section class="citation">
+  <blockquote>
+    "Créer, c’est vivre deux fois."
+    <span>– Albert Camus</span>
+  </blockquote>
+</section>
+
+<!-- 🦶 FOOTER -->
+<footer>
+  <p>© 2025 Jan Jawish. Tous droits réservés.</p>
+</footer>
+
+<!-- 📜 SCRIPTS -->
+<script src="script.js"></script>
+
+<!-- 🌗 BOUTON MODE -->
+<button class="mode-toggle" onclick="toggleMode()" title="Changer de mode">
+  <i class="fas fa-moon"></i>
+</button>
+<div id="gif-popup"></div>
+</body>
+</html>
