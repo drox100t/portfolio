@@ -71,6 +71,27 @@ let DetailProjet3 = document.getElementById("DetailProjet3")
 let btnSortirDetail = document.getElementById("plus1")
 let btnSortirDetail2 = document.getElementById("plus2")
 let btnSortirDetail3 = document.getElementById("plus3")
+document.addEventListener("DOMContentLoaded", () => {
+  const detail1 = document.getElementById("DetailProjet1");
+  const detail2 = document.getElementById("DetailProjet2");
+
+  // Afficher les projets
+  document.getElementById("plus1").addEventListener("click", () => {
+    detail1.style.marginLeft = "0";
+  });
+
+  document.getElementById("plus2").addEventListener("click", () => {
+    detail2.style.marginLeft = "0";
+  });
+
+  // Fermer les projets
+  document.querySelectorAll(".closeDetail, .revenir").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      detail1.style.marginLeft = "-200vh";
+      detail2.style.marginLeft = "-200vh";
+    });
+  });
+});
 
 
 // quitter les projets
@@ -123,3 +144,5 @@ btnSortirDetail3.addEventListener("click", ()=>{
 
 
 
+detail1.classList.add("active");
+detail1.style.marginLeft = "0";

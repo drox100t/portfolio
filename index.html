@@ -15,10 +15,10 @@
         <div id="menu-sortant">
 
             <div id="nav-menu-sortant">
-                <div id="close"><p>← Back</p></div>
+    <div id="close"><p>← Back</p></div>
+    <div><a href="index.html">Home</a></div>
+</div>
 
-                <div><a href="index.html">Home</a></div>
-            </div>
 
             <div class="line"></div>
 
@@ -71,10 +71,6 @@
                     <p>Continue →</p></a>
                 </div>
             </div>
-
-            <div class="line"></div>
-
-
 
             <div class="line"></div>
 
@@ -187,28 +183,24 @@
 
 
     <section id="section3">
+  <form action="#" method="POST">
+    <article>
+      <div>
+        <input name="prenom" type="text" placeholder="Prénom">
+        <input name="nom" type="text" placeholder="Nom">
+        <input name="email" type="email" placeholder="Votre e-mail">
+        <input name="sujet" type="text" placeholder="Sujet de votre mail">
+      </div>
 
-        <!-- <h2>ME CONTACTER</h2> -->
+      <div>
+        <textarea name="message" placeholder="Écrivez votre message ici" rows="5"></textarea>
+      </div>
+    </article>
 
-        <form action="" method="POST">
+    <input id="btn-envoyer-msg" type="submit" value="envoyer">
+  </form>
+</section>
 
-            <article>
-                <div>
-                    <input name="" id="" type="text" placeholder="Prénom">
-                    <input name="" id="" type="text" placeholder="Nom">
-                    <input name="" id="" type="text" placeholder="Votre e-mail">
-                    <input name="" id="" type="text" placeholder="sujet de votre mail">
-                </div>
-
-                <div>
-                    <textarea name="" id="" placeholder="Écrivez votre message ici" rows="4" cols="50"></textarea>
-                </div>
-            </article>
-
-            <input id="btn-envoyer-msg" type="submit" value="envoyer">
-        </form>
-
-    </section>
 
 
     <a href="#presentation"><div id="divfleche"><p id="fleche">↑</p></div></a>
@@ -217,11 +209,41 @@
 <script>
   window.addEventListener("load", () => {
     const loader = document.getElementById("loader");
-    document.body.style.visibility = "visible";
-    document.body.style.overflow = "auto";
-    setTimeout(() => {
-      loader.classList.add("fade-out");
-    }, 2500);
+
+    // Vérifie si le loader a déjà été affiché pendant cette session
+    const alreadyVisited = sessionStorage.getItem("loaderShown");
+
+    if (!alreadyVisited) {
+      // Première visite → afficher le loader
+      document.body.style.visibility = "hidden";
+      document.body.style.overflow = "hidden";
+
+      setTimeout(() => {
+        loader.classList.add("fade-out");
+        document.body.style.visibility = "visible";
+        document.body.style.overflow = "auto";
+        sessionStorage.setItem("loaderShown", "true");
+      }, 2500);
+    } else {
+      // Visite suivante → ne pas afficher le loader
+      loader.style.display = "none";
+      document.body.style.visibility = "visible";
+      document.body.style.overflow = "auto";
+    }
+  });
+</script>
+
+<script>
+  const btnMenu = document.getElementById("btn-menu");
+  const menu = document.getElementById("menu-sortant-main");
+  const close = document.getElementById("close");
+
+  btnMenu.addEventListener("click", () => {
+    menu.classList.add("active");
+  });
+
+  close.addEventListener("click", () => {
+    menu.classList.remove("active");
   });
 </script>
 

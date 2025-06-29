@@ -54,6 +54,9 @@ a{
 
 
 
+#menu-sortant-main.active {
+  margin-left: 0;
+}
 
 
 #menu-sortant-main{
@@ -763,8 +766,196 @@ input{
   }
 
   /* CACHER LE BOUTON "HOME" DANS LE MENU SORTANT */
-  #nav-menu-sortant div a[href="index.html"] {
-    display: none;
-  }
+header #divNavLinks a[href="index.html"] {
+  display: none;
 }
 
+
+  #section2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+  gap: 40px;
+  background-color: black;
+  height: auto; /* ✅ Plus de 100vh qui coupe */
+}
+
+#gauche, #droit {
+  width: 100%;
+  height: auto;
+}
+
+#gauche div h2 {
+  font-size: 40px; /* ✅ Réduction du titre */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#projet1, #projet2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 0 10px;
+}
+
+.anim-image {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+.description-projet {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: white;
+}
+
+#section2 #droit button {
+  align-self: center;
+  margin-top: 30px;
+  padding: 15px 30px;
+  font-size: 14px;
+}
+#section3 {
+  height: auto;
+  padding: 60px 20px;
+  background-size: cover;
+  background-position: center;
+}
+
+form {
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+form article {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+form article input,
+form article textarea {
+  width: 90%;
+  padding: 10px 15px;
+  border: none;
+  border-bottom: 1px solid #aaa;
+  background: transparent;
+  color: black;
+  font-family: "DM Sans";
+  font-size: 14px;
+}
+
+#btn-envoyer-msg {
+  display: block;
+  margin: 0 auto 40px auto;
+  padding: 15px 40px;
+  border: 1px solid black;
+  border-radius: 50px;
+  font-size: 14px;
+  background-color: inherit;
+  color: black;
+  transition: 0.3s ease;
+}
+
+#btn-envoyer-msg:hover {
+  background-color: black;
+  color: white;
+}
+
+
+
+
+#menu-sortant-main {
+  margin-left: -100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9999;
+  transition: 0.3s ease-in-out;
+  overflow-y: auto;
+}
+
+#menu-sortant-main.active {
+  margin-left: 0;
+}
+
+#menu-sortant {
+  width: 100%;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 5px;
+}
+
+.main-container .number {
+  font-family: "Aesthetic";
+  color: white;
+  font-size: 16px;
+}
+
+.main-container .text h2 {
+  font-family: "Aesthetic";
+  font-size: 28px;
+  color: white;
+  margin: 0;
+}
+
+.main-container .text p {
+  font-family: "DM Sans";
+  font-size: 14px;
+  color: white;
+  margin: 0;
+}
+
+.line {
+  width: 80%;
+  height: 1px;
+  background-color: white;
+  opacity: 0.3;
+}
+#nav-menu-sortant {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  box-sizing: border-box;
+}
+
+#nav-menu-sortant #close p,
+#nav-menu-sortant a {
+  font-family: "DM Sans";
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+}
+}
