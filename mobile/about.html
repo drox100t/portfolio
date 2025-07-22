@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Jan Jawish</title>
+  <link rel="stylesheet" href="about.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@200;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <img src="../Icon/menu.svg" id="burger" alt="menu">
+    <div class="nav-right">
+      <a href="about.html">About</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </header>
+
+  <section class="about">
+    <h1>À propos</h1>
+    <p class="bio">
+      Je m'appelle Jan Jawish. J’ai toujours eu un pied dans la tech, l’autre dans la cage. D’un côté, je construis des sites web, j’écris du code propre, j’optimise l’expérience utilisateur comme on affine un game plan.
+      De l’autre, je m’entraîne dur, je saigne sur les tatamis, j’apprends à encaisser, à lire l’adversaire, à réagir en une fraction de seconde. 
+      En MMI, j’ai appris à manier les outils du web comme des extensions de mon esprit. HTML, CSS, JavaScript, PHP, MySQL… tous ces langages sont devenus mes armes. 
+    </p>
+  </section>
+
+  <section class="cards">
+    <div class="card">
+      <img src="../images/mma2.jpg" alt="Passion">
+      <h3>PASSION</h3>
+      <p>Le MMA. Discipline, impact, stratégie. Un sport complet qui m’apprend autant sur moi que sur l’adversaire.</p>
+    </div>
+
+    <div class="card">
+      <img src="../images/paf.jpg" alt="Musique">
+      <h3>MUSIQUE PRÉFÉRÉE</h3>
+      <p><em>PAF</em> de Maes. Une ambiance unique, un son brut qui reste en tête et accompagne mes sessions de code.</p>
+    </div>
+
+    <div class="card">
+      <img src="../images/lebronx.webp" alt="Film">
+      <h3>FILM PRÉFÉRÉ</h3>
+      <p><em>Il était une fois dans le Bronx.</em> Une leçon de vie, entre choix, loyauté et vérité crue.</p>
+    </div>
+
+    <div class="card">
+      <img src="../images/jul.jpg" alt="Artiste préféré">
+      <h3>ARTISTE PRÉFÉRÉ</h3>
+      <p>Jul. Productivité, franchise, liberté artistique. Il fait ce qu’il veut, et ça marche. Inspirant.</p>
+    </div>
+
+    <div class="card">
+      <img src="../images/gti.jpg" alt="Véhicule préféré">
+      <h3>VÉHICULE PRÉFÉRÉ</h3>
+      <p>Golf 1 GTI. Un classique intemporel. Style, puissance et esprit vintage dans un seul châssis.</p>
+    </div>
+  </section>
+<div id="menu-mobile" class="hidden">
+  <div class="menu-header">
+    <span id="close-menu">← Back</span>
+    <a href="index.html" class="home-link">Home</a>
+  </div>
+  <ul class="menu-links">
+    <li><a href="dev.html">WEB DEVELOPPEMENT</a></li>
+    <div class="line"></div>
+    <li><a href="photo.html">PHOTOGRAPHY</a></li>
+    <div class="line"></div>
+    <li><a href="cinema.html">CINEMATOGRAPHY</a></li>
+    <div class="line"></div>
+    <li><a href="design.html">GRAPHIC DESIGN</a></li>
+  </ul>
+</div>
+
+<script>
+  const burger = document.getElementById('burger');
+  const menu = document.getElementById('menu-mobile');
+  const close = document.getElementById('close-menu');
+
+  burger.addEventListener('click', () => {
+    menu.classList.add('active');
+    menu.classList.remove('hidden');
+  });
+
+  close.addEventListener('click', () => {
+    menu.classList.remove('active');
+    setTimeout(() => {
+      menu.classList.add('hidden');
+    }, 500); // le temps de l'animation
+  });
+</script>
+</body>
+</html>
