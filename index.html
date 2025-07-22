@@ -1,283 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="CSS/style.css">
+  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jan Jawish - Portfolio</title>
+  <link rel="stylesheet" href="style-mobile.css" />
 </head>
 <body>
 
-    <div id="curseur"></div>
+  <header>
+    <img src="../Icon/menu.svg" id="burger" alt="menu">
+    <div class="nav-right">
+      <a href="about.html">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </header>
 
-    <div id="menu-sortant-main">
+  <section class="hero" id="hero">
+    <p class="name">JAN JAWISH</p>
+    <h1>PORTFOLIO</h1>
+    <p class="year">2024–2025</p>
+    <p class="desc">
+      Salut ! Je suis Jan, étudiant en BUT MMI à l’IUT de Rouen, passionné de photographie et de développement web.
+      J’aime toujours rechercher de nouvelles inspirations pour mon travail.
+    </p>
+    <a href="#projects" class="scroll-btn">Scroll pour découvrir ↓</a>
+  </section>
 
-        <div id="menu-sortant">
+  <section id="projects">
+    <h2>DERNIERS PROJETS</h2>
 
-            <div id="nav-menu-sortant">
-    <div id="close"><p>← Back</p></div>
-    <div><a href="index.html">Home</a></div>
-</div>
-
-
-            <div class="line"></div>
-
-            <div class="main-container">
-                <div class="number">
-                    01.
-                </div>
-
-                <div class="text">
-                    <a href="HTML/dev.html"><h2>Web developpement</h2>
-                    <p>Continue →</p></a>
-                </div>
-            </div>
-
-            <div class="line"></div>
-
-            <div class="main-container">
-                <div class="number">
-                    02.
-                </div>
-
-                <div class="text">
-                    <a href="HTML/photo.html"><h2>Photography</h2>
-                    <p>Continue →</p></a>
-                </div>
-            </div>
-
-            <div class="line"></div>
-
-            <div class="main-container">
-                <div class="number">
-                    03.
-                </div>
-
-                <div class="text">
-                    <a href="HTML/cinema.html"><h2>Cinematography</h2>
-                    <p>Continue →</p></a>
-                </div>
-            </div>
-
-            <div class="line"></div>
-
-            <div class="main-container">
-                <div class="number">
-                    04.
-                </div>
-
-                <div class="text">
-                    <a href="HTML/design.html"><h2>Graphic Design</h2>
-                    <p>Continue →</p></a>
-                </div>
-            </div>
-
-            <div class="line"></div>
-
-
-        </div>
-
+    <div class="project">
+      <a href="https://drox100t.github.io/oopticien/" target="_blank">
+        <img src="logo o opticien ok_page-0001.jpg" alt="Premier portfolio">
+        <p>Mon tout premier site officiel avec le centre optique OOPTICIEN</p>
+        <span class="year">2025</span>
+      </a>
     </div>
 
-
-
-    <header>
-
-        <div id="div-btn-menu">
-            <img id="btn-menu" src="Icon/menu.svg" alt="">
-        </div>
-
-        <div id="divNavLinks">
-            <a class="navlinks" href="HTML/about.html">About</a>
-            <a class="navlinks" href="#section3">Contact</a>
-        </div>
-        
-    </header>
-
-
-    
-
-    <div id="points">
-        <p id="point1">·</p>
-        <p id="point2">·</p>
-        <p id="point3">·</p>
+    <div class="project">
+      <a href="https://jawisjan.tpweb.univ-rouen.fr/UniTools/index.php" target="_blank">
+        <img src="../images/unitools.jpg" alt="Troisième portfolio">
+        <p>Une plateforme pour aider les étudiants par les étudiants</p>
+        <span class="year">2025</span>
+      </a>
     </div>
 
+    <a href="dev.html" class="see-all">Tout voir →</a>
+  </section>
 
+  <section id="contact">
+    <h2>Contact</h2>
+    <form>
+      <input type="text" placeholder="Prénom">
+      <input type="text" placeholder="Nom">
+      <input type="email" placeholder="Votre e-mail">
+      <input type="text" placeholder="Sujet de votre mail">
+      <textarea placeholder="Écrivez votre message ici"></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+  </section>
 
-
-    <section id="presentation">
-
-        <article>
-
-            <div id="titre">
-                
-                <h1>PORTFOLIO</h1>
-
-                <div id="prenomdate">
-                    <p>Jan Jawish</p>
-                    <p>2024-2025</p>
-                </div>
-            </div>
-        </article>
-
-
-      
-        <aside>        
-            
-            <div id="texte-presentation">
-                <p>Salut ! Je suis Jan, étudiant en BUT MMI à l'iut de Rouen. Passioné de <b>photogrpahie</b> et de <b>développement web</b>, j'aime toujours rechercher de nouvelles inspirations pour mon travail</p>
-            </div>
-
-            <div id="div-btn-explore">
-                <a href="#section2"><button>Scroll pour decouvrir     ↓</button></a>
-            </div>
-        </aside>
-
-        
-
-    </section>
-
-
-    <section id="section2">
-
-        <div id="gauche">
-            <div><H2>DERNIERS PROJETS</H2></div>
-
-            <div id="projet1">
-                <div>
-                    <a href="https://jawisjan.tpweb.univ-rouen.fr/portfolio/"><img class="anim-image" src="images/portfolio1.png" alt="" loading="lazy"></a>
-                </div>
-                
-
-                <div class="description-projet">
-                    <p>Premier portfolio réalisé lors du S1 de mon année MMI</p>
-                    <p>2024</p>
-                </div>
-
-            </div>
-        </div>
-
-        <div id="droit">
-
-            <div id="projet2">
-
-                <div>
-                    <a href="http://jawisjan.tpweb.univ-rouen.fr/portfolio3"><img class="anim-image" src="images/portfolio2.png" alt="" loading="lazy"></a>
-                </div>
-
-                <div class="description-projet">
-                    <p>Troisiéme portfolio réalisé lors de mes vacances d'été pour améliorer mes compétences</p>
-                    <p>2025</p>
-                </div>
-
-            </div>
-
-            <button id="btnToutVoir">Tout voir  →</button>
-        </div>
-
-
-    </section>
-
-
-
-
-    <section id="section3">
-  <form action="#" method="POST">
-    <article>
-      <div>
-        <input name="prenom" type="text" placeholder="Prénom">
-        <input name="nom" type="text" placeholder="Nom">
-        <input name="email" type="email" placeholder="Votre e-mail">
-        <input name="sujet" type="text" placeholder="Sujet de votre mail">
-      </div>
-
-      <div>
-        <textarea name="message" placeholder="Écrivez votre message ici" rows="5"></textarea>
-      </div>
-    </article>
-
-    <input id="btn-envoyer-msg" type="submit" value="envoyer">
-  </form>
-</section>
-
-
-
-    <a href="#presentation"><div id="divfleche"><p id="fleche">↑</p></div></a>
-
-    <script src="JS/main.js"></script>
-<script>
-  window.addEventListener("load", () => {
-    const loader = document.getElementById("loader");
-
-    // Vérifie si le loader a déjà été affiché pendant cette session
-    const alreadyVisited = sessionStorage.getItem("loaderShown");
-
-    if (!alreadyVisited) {
-      // Première visite → afficher le loader
-      document.body.style.visibility = "hidden";
-      document.body.style.overflow = "hidden";
-
-      setTimeout(() => {
-        loader.classList.add("fade-out");
-        document.body.style.visibility = "visible";
-        document.body.style.overflow = "auto";
-        sessionStorage.setItem("loaderShown", "true");
-      }, 2500);
-    } else {
-      // Visite suivante → ne pas afficher le loader
-      loader.style.display = "none";
-      document.body.style.visibility = "visible";
-      document.body.style.overflow = "auto";
-    }
-  });
-</script>
-
-<script>
-  const btnMenu = document.getElementById("btn-menu");
-  const menu = document.getElementById("menu-sortant-main");
-  const close = document.getElementById("close");
-
-  btnMenu.addEventListener("click", () => {
-    menu.classList.add("active");
-  });
-
-  close.addEventListener("click", () => {
-    menu.classList.remove("active");
-  });
-</script>
-
-
-
-
-
-<div id="loader">
-  <div class="bloc-chargement">
-    <div class="barre-longue">
-      <div class="carre"></div>
-      <div class="carre"></div>
-      <div class="carre"></div>
-      <div class="carre"></div>
-      <div class="carre"></div>
-      <div class="carre"></div>
-      <div class="carre"></div>
-      <div class="carre"></div>
-      <div class="carre"></div>
-      <div class="carre"></div>
-    </div>
-    <p class="texte-chargement">Chargement...</p>
+  
+<div id="menu-mobile" class="hidden">
+  <div class="menu-header">
+    <span id="close-menu">← Back</span>
+    <a href="index.html" class="home-link">Home</a>
   </div>
+  <ul class="menu-links">
+    <li><a href="dev.html">WEB DEVELOPPEMENT</a></li>
+    <div class="line"></div>
+    <li><a href="photo.html">PHOTOGRAPHY</a></li>
+    <div class="line"></div>
+    <li><a href="cinema.html">CINEMATOGRAPHY</a></li>
+    <div class="line"></div>
+    <li><a href="design.html">GRAPHIC DESIGN</a></li>
+  </ul>
 </div>
 
+<script>
+  const burger = document.getElementById('burger');
+  const menu = document.getElementById('menu-mobile');
+  const close = document.getElementById('close-menu');
 
+  burger.addEventListener('click', () => {
+    menu.classList.add('active');
+    menu.classList.remove('hidden');
+  });
 
+  close.addEventListener('click', () => {
+    menu.classList.remove('active');
+    setTimeout(() => {
+      menu.classList.add('hidden');
+    }, 500); // le temps de l'animation
+  });
+</script>
 
 <script>
-    if (window.innerWidth <= 768 && window.location.pathname.indexOf("/mobile") === -1) {
-      window.location.href = "mobile/index.html";
+  if (window.innerWidth > 768 && window.location.pathname.indexOf("/mobile") !== -1) {
+    window.location.href = "../index.html";
+  }
+</script>
+<script>
+  // 🔒 Anti-inspection
+  document.addEventListener('contextmenu', e => e.preventDefault());
+  document.addEventListener('keydown', e => {
+    if (
+      e.key === 'F12' ||
+      (e.ctrlKey && ['u', 'U', 's', 'S'].includes(e.key)) ||
+      (e.ctrlKey && e.shiftKey && ['I', 'i', 'J', 'j', 'C', 'c'].includes(e.key))
+    ) {
+      e.preventDefault();
     }
-  </script>
-
+  });
+</script>
 </body>
 </html>

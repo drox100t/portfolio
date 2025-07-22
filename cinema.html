@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cinematography – Jan Jawish</title>
+  <link rel="stylesheet" href="cinema.css" />
+</head>
+<body>
+
+  <header>
+    <img src="../Icon/menu.svg" id="burger" alt="menu">
+    <div class="nav-right">
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </header>
+
+  <section class="intro">
+    <p class="title">CINEMATOGRAPHY</p>
+    <p class="desc">
+      Quelques extraits vidéos réalisés entre 2023 et 2025.  
+      Regarde-les directement ici, en plein écran si tu veux.
+    </p>
+  </section>
+
+  <section class="gallery">
+    <div class="grid-videos">
+      <div class="video-box">
+        <iframe src="https://youtu.be/g33UHsUyc_Y?si=81yMpSMlDS0pq00c" title="Vidéo 1" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="video-box">
+        <iframe src="https://youtu.be/YZsHTH3zxUw" title="Vidéo 2" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <div id="menu-mobile" class="hidden">
+    <div class="menu-header">
+      <span id="close-menu">← Back</span>
+      <a href="index.html" class="home-link">Home</a>
+    </div>
+    <ul class="menu-links">
+      <li><a href="dev.html">WEB DEVELOPPEMENT</a></li>
+      <div class="line"></div>
+      <li><a href="photo.html">PHOTOGRAPHY</a></li>
+      <div class="line"></div>
+      <li><a href="cinema.html">CINEMATOGRAPHY</a></li>
+      <div class="line"></div>
+      <li><a href="design.html">GRAPHIC DESIGN</a></li>
+    </ul>
+  </div>
+
+  <script>
+    const burger = document.getElementById('burger');
+    const menu = document.getElementById('menu-mobile');
+    const close = document.getElementById('close-menu');
+
+    burger.addEventListener('click', () => {
+      menu.classList.add('active');
+      menu.classList.remove('hidden');
+    });
+
+    close.addEventListener('click', () => {
+      menu.classList.remove('active');
+      setTimeout(() => {
+        menu.classList.add('hidden');
+      }, 500);
+    });
+  </script>
+<script>
+  // 🔒 Anti-inspection
+  document.addEventListener('contextmenu', e => e.preventDefault());
+  document.addEventListener('keydown', e => {
+    if (
+      e.key === 'F12' ||
+      (e.ctrlKey && ['u', 'U', 's', 'S'].includes(e.key)) ||
+      (e.ctrlKey && e.shiftKey && ['I', 'i', 'J', 'j', 'C', 'c'].includes(e.key))
+    ) {
+      e.preventDefault();
+    }
+  });
+</script>
+</body>
+</html>
