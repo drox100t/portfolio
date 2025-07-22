@@ -254,5 +254,18 @@
     </div>
 
     <script src="../JS/cinema.js"></script>
+    <script>
+  // 🔒 Anti-inspection
+  document.addEventListener('contextmenu', e => e.preventDefault());
+  document.addEventListener('keydown', e => {
+    if (
+      e.key === 'F12' ||
+      (e.ctrlKey && ['u', 'U', 's', 'S'].includes(e.key)) ||
+      (e.ctrlKey && e.shiftKey && ['I', 'i', 'J', 'j', 'C', 'c'].includes(e.key))
+    ) {
+      e.preventDefault();
+    }
+  });
+</script>
 </body>
 </html>

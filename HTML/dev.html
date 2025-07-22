@@ -86,7 +86,7 @@
 
       <div class="Vignette">
         <p class="number">03.</p>
-        <a href="https://janjawish.fr/oopticien" target="_blank" rel="noopener noreferrer" class="divIMG">
+        <a href="http://drox100t.github.io/oopticien" target="_blank" rel="noopener noreferrer" class="divIMG">
           <img src="../images/oopticien.jpg" alt="Projet Oopticien">
         </a>
         <div class="descriptionIcon">
@@ -185,5 +185,18 @@
   </div>
 
   <script src="../JS/dev.js"></script>
+  <script>
+  // 🔒 Anti-inspection
+  document.addEventListener('contextmenu', e => e.preventDefault());
+  document.addEventListener('keydown', e => {
+    if (
+      e.key === 'F12' ||
+      (e.ctrlKey && ['u', 'U', 's', 'S'].includes(e.key)) ||
+      (e.ctrlKey && e.shiftKey && ['I', 'i', 'J', 'j', 'C', 'c'].includes(e.key))
+    ) {
+      e.preventDefault();
+    }
+  });
+</script>
 </body>
 </html>
