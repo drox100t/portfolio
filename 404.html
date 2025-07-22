@@ -1,12 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <script>
-  if (!['index.html', '', '/', 'index'].includes(window.location.pathname.split('/').pop())) {
-    window.location.href = "404.html";
-  }
-</script>
-
   <meta charset="UTF-8">
   <title>Erreur 404</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,12 +18,18 @@
       font-family: "Aesthetic", sans-serif;
       overflow: hidden;
       cursor: none;
+      position: relative;
     }
 
-    #threejs-canvas {
-      position: absolute;
+    body::before {
+      content: "";
+      position: fixed;
       top: 0;
       left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: url('https://cdn.pixabay.com/photo/2016/12/14/21/03/galaxy-1902104_1280.jpg') center/cover no-repeat;
+      opacity: 0.25;
       z-index: 0;
     }
 
@@ -102,18 +102,6 @@
       box-shadow: 0px 2px 16px -2px rgba(0,0,0,0.5);
     }
 
-    #btn-test {
-      opacity: 0;
-      transform: translateX(-20px);
-      pointer-events: none;
-    }
-
-    #btn-test.show {
-      opacity: 1;
-      transform: translateX(0);
-      pointer-events: auto;
-    }
-
     .contacts {
       position: fixed;
       right: 20px;
@@ -145,40 +133,17 @@
       from { transform: translateY(30px); opacity: 0; }
       to { transform: translateY(0); opacity: 1; }
     }
-
-    #game-container {
-      display: flex;
-      justify-content: center;
-      margin-top: 60px;
-      opacity: 0;
-      transform: scale(0.9);
-      transition: opacity 1s ease, transform 1s ease;
-      pointer-events: none;
-    }
-
-    #game-container.show-game {
-      opacity: 1;
-      transform: scale(1);
-      pointer-events: auto;
-    }
-
-    #game-canvas {
-      border: 1px solid white;
-      background-color: transparent;
-      cursor: none;
-    }
   </style>
 </head>
 <body>
 
 <div id="curseur"></div>
-<canvas id="threejs-canvas"></canvas>
 
 <div class="container">
   <h1>4<span class="galaxy-zero">✦</span>4</h1>
   <p>Tu t'es perdu dans la galaxie…</p>
   <div class="button-group">
-    <a href="index.html"><button id="btn-home" class="btn">← Accueil</button></a>
+    <a href="index.html"><button class="btn">← Accueil</button></a>
   </div>
 </div>
 
@@ -209,74 +174,12 @@
   </div>
 </div>
 
-
-
-<!-- Jeu T-Rex intégré -->
-<div id="game-container">
-  <canvas id="runner-canvas" width="800" height="150"></canvas>
-</div>
-
-
-
-<style>
-  #game-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 60px;
-    opacity: 0;
-    transform: scale(0.9);
-    transition: opacity 1s ease, transform 1s ease;
-    pointer-events: none;
-  }
-
-  #game-container.show-game {
-    opacity: 1;
-    transform: scale(1);
-    pointer-events: auto;
-  }
-
-  #runner-canvas {
-    background-color: transparent;
-    cursor: none;
-    border: 1px solid white;
-  }
-</style>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
-  // Curseur
+  // Curseur personnalisé
   const curseur = document.getElementById("curseur");
   document.addEventListener("mousemove", (e) => {
     curseur.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
   });
-
-  // Galaxie animée
-  const canvas = document.getElementById('threejs-canvas');
-  const renderer = new THREE.WebGLRenderer({ canvas, alpha: true });
-  const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-  camera.position.z = 5;
-
-  const starsGeometry = new THREE.BufferGeometry();
-  const starCount = 1000;
-  const positions = new Float32Array(starCount * 3);
-  for (let i = 0; i < starCount * 3; i++) {
-    positions[i] = (Math.random() - 0.5) * 20;
-  }
-  starsGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-  const starsMaterial = new THREE.PointsMaterial({ color: 0xffffff, size: 0.03 });
-  const stars = new THREE.Points(starsGeometry, starsMaterial);
-  scene.add(stars);
-
-  function animate() {
-    requestAnimationFrame(animate);
-    stars.rotation.y += 0.0008;
-    stars.rotation.x += 0.0005;
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.render(scene, camera);
-  }
-  animate();
-
 
   // 🔒 Anti-inspection
   document.addEventListener('contextmenu', e => e.preventDefault());
@@ -289,10 +192,9 @@
       e.preventDefault();
     }
   });
-</script>
-<script>
-  window.addEventListener("error", function (e) {
-    // Rediriger vers la page 404 si une ressource échoue
+
+  // Redirection erreur si ressource échoue
+  window.addEventListener("error", function () {
     window.location.href = "404.html";
   }, true);
 </script>
