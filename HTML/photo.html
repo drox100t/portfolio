@@ -121,6 +121,38 @@
     </section>
 
         
+<script>
+// Empêche le drag d'images
+document.addEventListener("dragstart", function(e) {
+  if (e.target.nodeName === "IMG") {
+    e.preventDefault();
+  }
+});
+
+// Empêche clic droit
+document.addEventListener("contextmenu", function(e) {
+  e.preventDefault();
+});
+
+// Bloque certaines combinaisons clavier
+document.addEventListener("keydown", function(e) {
+  // F12
+  if (e.key === "F12") {
+    e.preventDefault();
+  }
+
+  // Ctrl+S, Ctrl+U, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+Shift+C
+  if (
+    (e.ctrlKey && e.key.toLowerCase() === "s") ||
+    (e.ctrlKey && e.key.toLowerCase() === "u") ||
+    (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "i") ||
+    (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "j") ||
+    (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "c")
+  ) {
+    e.preventDefault();
+  }
+});
+</script>
             
 
     <script src="../JS/photo.js"></script>
