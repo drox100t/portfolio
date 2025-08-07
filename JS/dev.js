@@ -42,10 +42,16 @@ btnClose.addEventListener("click", () => {
 let DetailProjet1 = document.getElementById("DetailProjet1");
 let DetailProjet2 = document.getElementById("DetailProjet2");
 let DetailProjet3 = document.getElementById("DetailProjet3");
+let DetailProjet4 = document.getElementById("DetailProjet4");
+let DetailProjet5 = document.getElementById("DetailProjet5");
+let DetailProjet6 = document.getElementById("DetailProjet6");
 
 let btnSortirDetail = document.getElementById("plus1");
 let btnSortirDetail2 = document.getElementById("plus2");
 let btnSortirDetail3 = document.getElementById("plus3");
+let btnSortirDetail4 = document.getElementById("plus4");
+let btnSortirDetail5 = document.getElementById("plus5");
+let btnSortirDetail6 = document.getElementById("plus6");
 
 // Boutons fermer et revenir
 let btnCroix = document.querySelectorAll(".closeDetail");
@@ -56,6 +62,9 @@ let btnExit = document.querySelectorAll(".revenir");
         DetailProjet1.style.marginLeft = "-200vh";
         DetailProjet2.style.marginLeft = "-200vh";
         DetailProjet3.style.marginLeft = "-200vh";
+        DetailProjet4.style.marginLeft = "-200vh";
+        DetailProjet5.style.marginLeft = "-200vh";
+        DetailProjet6.style.marginLeft = "-200vh";
     });
 });
 
@@ -70,4 +79,13 @@ btnSortirDetail2.addEventListener("click", () => {
 
 btnSortirDetail3.addEventListener("click", () => {
     DetailProjet3.style.marginLeft = "0";
+});
+btnSortirDetail4.addEventListener("click", () => {
+    DetailProjet4.style.marginLeft = "0";
+});
+btnSortirDetail5.addEventListener("click", () => {
+    DetailProjet5.style.marginLeft = "0";
+});
+btnSortirDetail6.addEventListener("click", () => {
+    DetailProjet6.style.marginLeft = "0";
 });
