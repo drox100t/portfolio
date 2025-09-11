@@ -273,3 +273,29 @@ form button:hover {
   background-color: white;
   opacity: 0.4;
 }
+
+#texte-presentation p {
+  margin: 0;
+  line-height: 1.7;
+  letter-spacing: 0.3px;
+  word-break: break-word;
+  text-align: center;
+  list-style: none;
+}
+
+
+
+#texte-presentation{
+    width: 350px;
+}
+
+#texte-presentation p{
+    color: black;
+    text-transform: uppercase;
+}
+
+
+  #texte-presentation {
+    width: 100%;
+    text-align: center;
+  }
