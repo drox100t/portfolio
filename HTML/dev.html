@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="../CSS/style-dev.css">
 </head>
 <body>
+<!-- Auth widget commun à toutes les pages -->
+<script src="/mmi1/portfolio-master/auth-widget.js" data-root="/mmi1/portfolio-master/"></script>
 
   <div id="curseur"></div>
 
@@ -53,6 +55,9 @@
     <div id="div-btn-menu">
       <img id="btn-menu" src="../Icon/menu.svg" alt="">
     </div>
+    <div id="authBox">
+  <!-- Rempli en JS : bouton "Créer un compte" OU "Bonjour, Prénom" -->
+</div>
     <div id="divNavLinks">
       <a class="navlinks" href="about.html">About</a>
       <a class="navlinks" href="../index.html#section3">Contact</a>
@@ -64,18 +69,18 @@
 
       <div class="Vignette">
         <p class="number">01.</p>
-        <a href="https://jawisjan.tpweb.univ-rouen.fr/EtuKit" target="_blank" rel="noopener noreferrer" class="divIMG">
+        <a href="https://etukit.fr" target="_blank" rel="noopener noreferrer" class="divIMG">
           <img src="../images/Black White Scrapbook Monochrome Group Project Presentation.png" alt="Projet UniTools">
         </a>
         <div class="descriptionIcon">
-          <p>UniTools</p>
+          <p>EtuKit</p>
           <p id="plus1">En savoir plus</p>
         </div>
       </div>
 
       <div class="Vignette">
         <p class="number">02.</p>
-        <a href="https://jawisjan.tpweb.univ-rouen.fr/portfolio3" target="_blank" rel="noopener noreferrer" class="divIMG">
+        <a href="https://jawisjan.tpweb.univ-rouen.fr/sae203" target="_blank" rel="noopener noreferrer" class="divIMG">
           <img src="../images/billeterie.jpg" alt="Projet Billetterie">
         </a>
         <div class="descriptionIcon">
@@ -453,5 +458,6 @@ document.addEventListener("keydown", function(e) {
     }
   });
 </script>
+
 </body>
 </html>

@@ -87,12 +87,16 @@
         <div id="div-btn-menu">
             <img id="btn-menu" src="Icon/menu.svg" alt="">
         </div>
-
+<div id="authBox">
+  <!-- Rempli en JS : bouton "Créer un compte" OU "Bonjour, Prénom" -->
+</div>
         <div id="divNavLinks">
             <a class="navlinks" href="HTML/about.html">About</a>
             <a class="navlinks" href="#section3">Contact</a>
         </div>
-        
+        <!-- Bouton / message d'auth -->
+
+
     </header>
 
 
@@ -187,7 +191,7 @@
             <div id="projet2">
 
                 <div>
-                    <a href="http://jawisjan.tpweb.univ-rouen.fr/EtuKit"><img class="anim-image" src="images/Black White Scrapbook Monochrome Group Project Presentation.png" alt="" loading="lazy"></a>
+                    <a href="http://etukit.fr"><img class="anim-image" src="images/Black White Scrapbook Monochrome Group Project Presentation.png" alt="" loading="lazy"></a>
                 </div>
 
                 <div class="description-projet">
@@ -220,6 +224,7 @@
         <textarea name="message" placeholder="Écrivez votre message ici" rows="5"></textarea>
       </div>
     </article>
+<input type="hidden" name="csrf" id="contact-csrf">
 
     <input id="btn-envoyer-msg" type="submit" value="envoyer">
   </form>
@@ -346,5 +351,112 @@ document.addEventListener("keydown", function(e) {
     }
   });
 </script>
+<script>
+  // Base vers /auth/ et /auth/api/ depuis la page racine
+  const AUTH_ROOT = new URL('auth/', window.location.href).href;
+  const AUTH_API  = new URL('api/', AUTH_ROOT).href;
+  let CSRF = null;
+
+  async function bootstrapCSRF() {
+    try {
+      const r = await fetch(`${AUTH_API}send_code.php?bootstrap=1`, { credentials:'include' });
+      const j = await r.json();
+      if (j && j.csrf) {
+        CSRF = j.csrf;
+        const input = document.getElementById('contact-csrf');
+        if (input) input.value = CSRF;
+      }
+    } catch(e){}
+  }
+
+  // Remplit le header selon la session
+  async function renderAuthBox() {
+    const box = document.getElementById('authBox');
+    if (!box) return;
+    if (!CSRF) await bootstrapCSRF();
+
+    try {
+      const r = await fetch(`${AUTH_API}me.php`, { credentials: 'include' });
+      const j = await r.json();
+
+      if (j.ok && j.logged_in) {
+        const first = (j.name || '').split(' ')[0] || j.name || '👋';
+        box.innerHTML = `
+          <a class="btn-auth" href="messages.php">Me contacter</a>
+          <span class="hello">Bonjour, ${first}</span>
+          <button class="btn-auth" id="btn-logout" type="button">Se déconnecter</button>
+        `;
+
+document.getElementById('btn-logout')?.addEventListener('click', async ()=>{
+  const fd = new FormData(); fd.append('csrf', CSRF || '');
+  try{
+    const r = await fetch(`${AUTH_API}logout.php`, { method:'POST', body: fd, credentials:'include' });
+    const j = await r.json().catch(()=> ({}));
+    if (r.ok && j.ok) location.reload();
+    else alert(j.error || 'Déconnexion impossible (CSRF ?)');   // <-- feedback utile
+  }catch(_){
+    alert('Déconnexion: erreur réseau');
+  }
+});
+
+      } else {
+        const signupURL = new URL('index.html#signup', AUTH_ROOT).href;
+        box.innerHTML = `
+        `;
+      }
+    } catch (e) {
+      const signupURL = new URL('index.html#signup', AUTH_ROOT).href;
+    }
+  }
+
+  // Envoi AJAX du formulaire de contact
+  function wireContactForm() {
+    const form = document.querySelector('#section3 form');
+    if (!form) return;
+
+    form.addEventListener('submit', async (e)=>{
+      e.preventDefault();
+      if (!CSRF) await bootstrapCSRF();
+
+      const fd = new FormData(form);
+      if (!fd.get('csrf') && CSRF) fd.append('csrf', CSRF);
+
+      const btn = document.getElementById('btn-envoyer-msg');
+      const label0 = btn.value;
+      btn.value = 'Envoi...'; btn.disabled = true;
+
+try{
+  const r = await fetch(`${AUTH_API}contact.php`, { method:'POST', body: fd, credentials:'include' });
+  let j = null;
+  try { j = await r.json(); }
+  catch(e){ const t = await r.text(); throw new Error(t || `HTTP ${r.status}`); }
+
+  if (r.ok && j && j.ok) {
+    btn.value = 'Message envoyé ✅';
+    form.reset();
+    const input = document.getElementById('contact-csrf');
+    if (input && CSRF) input.value = CSRF;
+  } else {
+    btn.value = 'Réessayer';
+    alert((j && j.error) || `Erreur (${r.status})`);
+  }
+}catch(err){
+  btn.value = 'Réessayer';
+  alert(err.message || 'Erreur réseau');
+}finally{
+        setTimeout(()=>{ btn.value = label0; btn.disabled = false; }, 1200);
+      }
+    });
+  }
+
+  (async function init(){
+    await bootstrapCSRF();
+    await renderAuthBox();
+    wireContactForm();
+  })();
+</script>
+
+
+
 </body>
 </html>

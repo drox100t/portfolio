@@ -8,69 +8,49 @@
 </head>
 <body>
 
+<!-- Auth widget commun à toutes les pages -->
+<script src="/mmi1/portfolio-master/auth-widget.js" data-root="/mmi1/portfolio-master/"></script>
 
     <div id="curseur"></div>
 
-    <div id="menu-sortant-main">
+  <div id="menu-sortant-main">
+    <div id="menu-sortant">
+      <div id="nav-menu-sortant">
+        <div id="close"><p>← Back</p></div>
+        <div><a href="../index.html">Home</a></div>
+      </div>
 
-        <div id="menu-sortant">
+      <div class="line"></div>
 
-            <div id="nav-menu-sortant">
-                <div id="close"><p>← Back</p></div>
+      <div class="main-container">
+        <div class="number">01.</div>
+        <div class="text"><a href="dev.html"><h2>Web developpement</h2><p>Continue →</p></a></div>
+      </div>
 
-                <div><a href="../index.html">Home</a></div>
-            </div>
+      <div class="line"></div>
 
-            <div class="line"></div>
+      <div class="main-container">
+        <div class="number">02.</div>
+        <div class="text"><a href="photo.html"><h2>Photography</h2><p>Continue →</p></a></div>
+      </div>
 
-            <div class="main-container">
-                <div class="number">
-                    01.
-                </div>
+      <div class="line"></div>
 
-                <div class="text">
-                    <a href="dev.html"><h2>Web developpement</h2>
-                    <p>Continue →</p></a>
-                </div>
-            </div>
+      <div class="main-container">
+        <div class="number">03.</div>
+        <div class="text"><a href="cinema.html"><h2>Cinematography</h2><p>Continue →</p></a></div>
+      </div>
 
-            <div class="line"></div>
+      <div class="line"></div>
 
-            <div class="main-container">
-                <div class="number">
-                    02.
-                </div>
+      <div class="main-container">
+        <div class="number">04.</div>
+        <div class="text"><a href="design.html"><h2>Graphic Design</h2><p>Continue →</p></a></div>
+      </div>
 
-                <div class="text">
-                    <a href="photo.html"><h2>Photography</h2>
-                    <p>Continue →</p></a>
-                </div>
-            </div>
-
-            <div class="line"></div>
-
-            <div class="main-container">
-                <div class="number">
-                    
-                </div>
-
-                <div class="text">
-                    
-                </div>
-            </div>
-
-            <div class="line"></div>
-
-            <div class="main-container">
-                <div class="number">
-                    04.
-                </div>
-
-                <div class="text">
-                    <a href="design.html"><h2>Graphic Design</h2>
-                    <p>Continue →</p></a>
-                </div>
-            </div>
+      <div class="line"></div>
+    </div>
+  </div>
 
             <div class="line"></div>
 
@@ -86,7 +66,9 @@
         <div id="div-btn-menu">
             <img id="btn-menu" src="../Icon/menu.svg" alt="">
         </div>
-
+<div id="authBox">
+  <!-- Rempli en JS : bouton "Créer un compte" OU "Bonjour, Prénom" -->
+</div>
         <div id="divNavLinks">
             <a class="navlinks" href="about.html">About</a>
             <a class="navlinks" href="../index.html#section3">Contact</a>
@@ -114,10 +96,10 @@
                     <div class="Vignette">
                         <p class="number">O2.</p>
                         
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/YZsHTH3zxUw?si=vZ4axKSl3oD1vPh7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>      
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9GZFdIzQzOw?si=agg5cIaE2rdsQk5f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>   
                         
                         <div class="descriptionIcon">
-                            <p>TEASER EXPERIENCE IMMERSIVE || ELBEUF 2025</p> 
+                            <p>INTERVIEW MAISON SPORT SANTE || 2025 ELBEUF</p> 
                             <p id="plus2">En savoir plus</p>                        </div> 
                     </div>
                     
@@ -212,14 +194,15 @@
             <p class="closeDetail">×</p>
 
             <div>
-                <h2>TEASER EXPERIENCE IMMERSIVE || ELBEUF 2025</h2>
-                <p>Préparez-vous à vivre Elbeuf comme jamais auparavant : une expérience immersive en caméra subjective, où passé industriel, récits vivants et rencontres inattendues se mêlent pour vous embarquer au cœur de la ville et de son histoire.</p>
+                <h2>INTERVIEW MAISON SPORT SANTE || 2025 ELBEUF</h2>
+                <p>Préparez-vous à vivre Elbeuf autrement avec la Maison Sport-Santé :
+une immersion inédite en caméra subjective, où l’activité physique, le bien-être et la santé se conjuguent avec des récits vivants et des rencontres inspirantes. L’interview vous embarque au cœur de cette démarche, qui relie sport, prévention et accompagnement, pour redécouvrir la ville et ses habitants sous un angle unique.</p>
             </div>
 
             <div class="tabDetail">
                 <div class="info"><p>Année</p><p>2025</p></div>
                 <div class="line2"></div>
-                <div class="info"><p>Type</p><p>Réalisation d'un teaser</p></div>
+                <div class="info"><p>Type</p><p>Réalisation d'une interview</p></div>
                 <div class="line2"></div>
                 <div class="info"><p>Sujet</p><p>Elbeuf</p></div>
                 <div class="line2"></div>
@@ -228,14 +211,19 @@
             <div class="detail">
                 <h2>Détails du Projet : </h2>
 
-                <p>"Elbeuf 2025 – Expérience immersive" est une vidéo en caméra subjective qui vous plonge dans une visite inédite de la ville d’Elbeuf. Le spectateur incarne un personnage anonyme, évoluant dans différents lieux emblématiques du patrimoine industriel elbeuvien, comme le Palais industriel ou d’anciennes usines reconverties. À chaque étape, il est accueilli par un professeur ou un personnage incarné, qui raconte avec passion l’histoire du lieu, ses métamorphoses, ses enjeux et les voix oubliées qui l’ont traversé. Le spectateur ne regarde pas l’histoire : il la vit.
+                <p>La vidéo propose une plongée en caméra subjective au cœur de la Maison Sport-Santé d’Elbeuf, pour faire découvrir autrement ce lieu dédié au bien-être, à la prévention et à l’activité physique adaptée.
+Le spectateur incarne un personnage anonyme qui traverse différents espaces de la structure : salle de sport adaptée, espaces de consultation, lieux de convivialité. À chaque étape, il rencontre un professionnel de santé, un éducateur sportif ou un usager, qui lui raconte son parcours, ses réussites, mais aussi les valeurs portées par la Maison Sport-Santé. Ce n’est pas une simple visite : c’est une expérience vécue, qui fait ressentir la dimension humaine et inclusive du projet.
                 </p>
 
                 <p>
-                    Sur le plan technique, la vidéo adopte un format POV (point of view), avec un tournage en caméra embarquée stabilisée (type GoPro ou Reflex avec harnais), créant une sensation d’immersion totale. Les choix de sound design renforcent cette immersion : ambiances sonores réalistes, voix spatialisées, bruitages discrets mais marquants. Le montage fluide et rythmé alterne entre scènes de marche, dialogues vivants, et moments contemplatifs. Certains passages incluent des effets de transition cinématographiques, voire des touches d’humour ou d’émotion, pour renforcer le lien entre le spectateur et le parcours.
+                    La réalisation adopte un format POV (point of view), avec un tournage en caméra embarquée (type GoPro ou Reflex avec harnais), créant une immersion totale dans le quotidien de la MSS.
+Le sound design participe à cette immersion : sons ambiants réalistes (battements de ballons, respirations lors d’un effort, voix réelles), voix spatialisées, bruitages subtils mais expressifs.
+Le montage, fluide et rythmé, alterne entre scènes actives (séances de sport, échanges dynamiques) et moments plus calmes (témoignages, respirations, séquences contemplatives). Des transitions créatives, parfois teintées d’humour ou d’émotion, viennent renforcer le lien affectif entre le spectateur et l’expérience.
                 </p>
 
-                <p>Ce projet, à la croisée de l’histoire, de la pédagogie et de la création audiovisuelle, vise à valoriser la mémoire locale d’Elbeuf tout en la rendant accessible et attrayante pour un public jeune. Loin d’un simple documentaire, cette expérience sensorielle mise sur la narration incarnée, la proximité physique et l’émotion pour transmettre le patrimoine. "Elbeuf 2025" devient ainsi un outil original de médiation culturelle, mais aussi un manifeste : celui d’un territoire qui parle, se souvient, et invite chacun à écouter autrement.
+                <p>Cette création n’est pas un simple reportage : elle incarne un outil original de médiation pour sensibiliser aux bienfaits du sport sur la santé, valoriser les parcours inspirants des usagers et mettre en lumière le rôle clé des professionnels.
+Accessible et attractive pour un public large, et notamment pour les jeunes, l’expérience mise sur la narration incarnée et la proximité émotionnelle.
+La Maison Sport-Santé d’Elbeuf se dévoile ainsi comme un lieu vivant, moteur d’inclusion et d’innovation sociale, et cette vidéo immersive devient un manifeste : celui d’un territoire qui prend soin de ses habitants, qui se souvient, et qui prépare l’avenir en alliant sport, santé et qualité de vie.
                 </p>
             </div>
 
@@ -305,5 +293,6 @@ document.addEventListener("keydown", function(e) {
     }
   });
 </script>
+
 </body>
 </html>
